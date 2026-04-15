@@ -25,6 +25,9 @@ const article1Source = document.getElementById('article1Source');
 const article1Title = document.getElementById('article1Title');
 const article1Text = document.getElementById('article1Text');
 const article1Link = document.getElementById('article1Link');
+const article1Category = document.getElementById('article1Category');
+const article1Image = document.getElementById('article1Image');
+
 
 const article2Source = document.getElementById('article2Source');
 const article2Title = document.getElementById('article2Title');
@@ -72,7 +75,7 @@ const latitude = 36.16;
 const longitude = -86.78;
 
 // Students should build their own news URL with their own key and settings.
-const newsUrl = 'https://newsdata.io/api/1/latest?apikey=pub_e92c5a112bdc4ddd9cdb0cab17f84573&language=en&category=science,technology,world,breaking,environment&timezone=america/chicago&image=1&removeduplicate=1';
+const newsUrl = 'https://newsdata.io/api/1/latest?apikey=pub_e92c5a112bdc4ddd9cdb0cab17f84573&language=en&category=science,technology,world,breaking,environment';
 
 function showDate() {
   const today = new Date();
@@ -194,6 +197,8 @@ async function loadNews() {
       article1Title.textContent = article1.title;
       article1Text.textContent = article1.description || 'No description available.';
       article1Link.href = article1.link;
+		article1Category.textContent = article1.category;
+		article1Image.src = article1.image_url;
     }
 
     if (article2) {

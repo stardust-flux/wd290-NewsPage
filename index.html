@@ -18,36 +18,48 @@
     <ul class="navbar-nav">
 		<li class="nav-item"> <p class="nav-link active" id="currentDate">Date</p> </li>
       <li class="nav-item"> <a class="nav-link" href="#featuredTitle">Featured Article</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="#cityName">Weather</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#weatherCity">Weather</a> </li>
       <li class="nav-item"> <a class="nav-link" href="#currency">$</a> </li>
     </ul>
   </div>
 </nav>
 <main class="container">
-  <div class="p-4 p-md-5 mt-4 mb-4 rounded text-body-emphasis bg-body-secondary">
+  <div class="row p-4 p-md-5 mt-4 mb-4 rounded text-body-emphasis bg-body-secondary">
     <div class="col-lg-6 px-0">
       <h1 class="display-4 fst-italic" id="featuredTitle">Featured Article</h1>
       <p class="lead my-3" id="featuredText">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+		<p id="featuredSource"></p>
+		<p id="newsError"></p>
       <p class="lead mb-0" ><a href="#" class="text-body-emphasis fw-bold" id="featuredLink">Continue reading...</a></p>
     </div>
+	  <div class="col-lg-6">
+          <img src="..." id="featuredImage" class="img-fluid rounded float-end" alt="article image">
+        </div>
   </div>
 	
   <div class="container mt-5">
   <div class="row">
     <div class="col-sm-4">
 		<div class="container mb-5">
-      <h2 class="weather" id="cityName">About Me</h2>
-      <h5>Photo of me:</h5>
-      <div class="fakeimg">Fake Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h2 class="weather" id="weatherCity">About Me</h2>
+      <div class="fakeimg" id="weatherIcon">Fake Image</div>
+      <p id="weatherTemp">Some text </p>
+			<p id="weatherCondition">Some text </p>
+			<p id="weatherWind">Some text </p>
+			<p id="weatherError">Some text </p>
 			</div>
 		<br>
 		<div class="container mt-5">
       <h3 class="mt-4" id="currency">$ Currency Exchange $</h3>
       <p>Lorem ipsum dolor sit ame.</p>
+			<p id="rateEUR"></p>
+			<p id="rateGBP"></p>
+			<p id="rateJPY"></p>
+			<p id="rateMXN"></p>
+			<p id="rateUAH"></p>
       <ul class="nav nav-pills flex-column">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
+          
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -63,22 +75,18 @@
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" id="article1">
-        <div class="col p-4 d-flex flex-column position-static" id="category"> <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis" id="article1Category">Design</strong>
           <h3 class="mb-0" id="article1Title">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
+          <div class="mb-1 text-body-secondary" id="article1Source">Nov 11</div>
           <p class="mb-auto" id="article1Text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link"> Continue reading
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link" id="article1Link"> Continue reading
           <svg class="bi" aria-hidden="true">
             <use xlink:href="#chevron-right"></use>
           </svg>
           </a> </div>
         <div class="col-auto d-none d-lg-block">
-          <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img " height="250" preserveAspectRatio="xMidYMid slice" role="img" width="200" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
+          <img src="..." id="article1Image" class="img-fluid overflow-hidden rounded float-end" alt="article image">
         </div>
       </div>
 		<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -134,11 +142,9 @@
           </svg>
           </a> </div>
         <div class="col-auto d-none d-lg-block">
-          <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img " height="250" preserveAspectRatio="xMidYMid slice" role="img" width="200" xmlns="http://www.w3.org/2000/svg">
+          <img src="..."  class="img-fluid rounded float-end" alt="article image">
             <title>Placeholder</title>
             <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
         </div>
       </div>
     </div>
