@@ -91,7 +91,7 @@ const latitude = 36.16;
 const longitude = -86.78;
 
 // Students should build their own news URL with their own key and settings.
-const newsUrl = 'https://newsdata.io/api/1/latest?apikey=pub_e92c5a112bdc4ddd9cdb0cab17f84573&language=en&category=science,technology,world,breaking,environment';
+const newsUrl = 'https://newsdata.io/api/1/latest?apikey=pub_b0b0463d9d7b4dea97a0d9bd3fc2a30a&language=en&category=science,world,technology,breaking,entertainment&timezone=america/chicago&image=1&removeduplicate=1';
 
 function showDate() {
   const today = new Date();
