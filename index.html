@@ -8,23 +8,26 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div class="p-5 bg-primary text-white text-center">
-  <h1>Coverage Chain</h1>
-  <p>Keeping you in the link</p>
+<div class="banner p-5 bg-secondary-subtle text-center">
+  <h1 class="bannerHeadline">Coverage Chain</h1>
+  <p class="bannerTagline">Keeping you in the link</p>
 </div>
-<nav class="navbar navbar-expand-sm sticky-top" style="background-color: #e3f2fd;" data-bs-theme="light">
+<nav class="navbar navbar-expand-sm sticky-top text-white" style="background-color: #5D89BA;" data-bs-theme="light">
   <div class="container-fluid">
     <div id="div1" class="fa"></div>
     <ul class="navbar-nav">
-		<li class="nav-item"> <p class="nav-link active" id="currentDate">Date</p> </li>
-      <li class="nav-item"> <a class="nav-link" href="#featuredTitle">Featured Article</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="#weatherCity">Weather</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="#currency">$</a> </li>
+		<li class="nav-item"> <p class="nav-link active text-white" id="currentDate">Date</p> </li>
+      <li class="nav-item"> <a class="nav-link text-white" href="#featuredJump">Featured Article</a> </li>
+      <li class="nav-item"> <a class="nav-link text-white" href="#weatherJump">Weather</a> </li>
+      <li class="nav-item"> <a class="nav-link text-white" href="#currencyJump">$</a> </li>
     </ul>
   </div>
 </nav>
+<br id="featuredJump">
+<br>
+<br>
 <main class="container">
-  <div class="row p-4 p-md-5 mt-4 mb-4 rounded text-body-emphasis bg-body-secondary">
+  <div class="row p-4 p-md-5 mt-4 mb-4 rounded text-body-emphasis bg-body-secondary border border-primary shadow p-3 mb-5 bg-body-tertiary rounded">
     <div class="col-lg-6 px-0">
       <h1 class="display-4 fst-italic" id="featuredTitle">Featured Article</h1>
       <p class="lead my-3" id="featuredText">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
@@ -33,49 +36,40 @@
       <p class="lead mb-0" ><a href="#" class="text-body-emphasis fw-bold" id="featuredLink">Continue reading...</a></p>
     </div>
 	  <div class="col-lg-6">
-          <img src="..." id="featuredImage" class="img-fluid rounded float-end" alt="article image">
+          <img src="..." id="featuredImage" class="img-fluid overflow-hidden rounded float-end" onerror="this.style.display='none';" alt="article image">
         </div>
   </div>
 	
+  <br id="weatherJump">
+
   <div class="container mt-5">
   <div class="row">
     <div class="col-sm-4">
-		<div class="container mb-5">
-      <h2 class="weather" id="weatherCity">About Me</h2>
+		<div class="container border border-info-subtle shadow p-3 mb-5 bg-body-tertiary rounded mb-5">
+      <h2 class="weather mt-1" id="weatherCity">About Me</h2>
       <div class="fakeimg" id="weatherIcon">Fake Image</div>
       <p id="weatherTemp">Some text </p>
 			<p id="weatherCondition">Some text </p>
 			<p id="weatherWind">Some text </p>
-			<p id="weatherError">Some text </p>
+			<p id="weatherError"> </p>
 			</div>
-		<br>
-		<div class="container mt-5">
-      <h3 class="mt-4" id="currency">$ Currency Exchange $</h3>
-      <p>Lorem ipsum dolor sit ame.</p>
+		<br id="currencyJump">
+    <br>
+    <br>
+		<div class="container border border-success shadow p-3 mb-5 bg-body-tertiary rounded mt-1">
+      <h3 class="currency mt-1" id="currency">$ Currency Exchange $</h3>
+      <p>Current USD conversion rates:</p>
 			<p id="rateEUR"></p>
 			<p id="rateGBP"></p>
 			<p id="rateJPY"></p>
 			<p id="rateMXN"></p>
 			<p id="rateUAH"></p>
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
+      <p id="currencyError"> </p>
 		</div>
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow p-3 mb-5 bg-body-tertiary rounded h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis" id="article1Category">Design</strong>
           <h3 class="mb-0" id="article1Title">Post title</h3>
           <div class="mb-1 text-body-secondary" id="article1Source">Nov 11</div>
@@ -89,40 +83,32 @@
           <img src="..." id="article1Image" class="img-fluid overflow-hidden rounded float-end" alt="article image">
         </div>
       </div>
-		<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link"> Continue reading
+		<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow p-3 mb-5 bg-body-tertiary rounded h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis" id="article2Category">Design</strong>
+          <h3 class="mb-0" id="article2Title">Post title</h3>
+          <div class="mb-1 text-body-secondary" id="article2Source">Nov 11</div>
+          <p class="mb-auto" id="article2Text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link" id="article2Link"> Continue reading
           <svg class="bi" aria-hidden="true">
             <use xlink:href="#chevron-right"></use>
           </svg>
           </a> </div>
         <div class="col-auto d-none d-lg-block">
-          <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img " height="250" preserveAspectRatio="xMidYMid slice" role="img" width="200" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
+          <img src="..." id="article2Image" class="img-fluid overflow-hidden rounded float-end" onerror="this.style.display='none';" alt="article image">
         </div>
       </div>
-		<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link"> Continue reading
+		<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow p-3 mb-5 bg-body-tertiary rounded h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis" id="article3Category">Design</strong>
+          <h3 class="mb-0" id="article3Title">Post title</h3>
+          <div class="mb-1 text-body-secondary" id="article3Source">Nov 11</div>
+          <p class="mb-auto" id="article3Text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link" id="article3Link"> Continue reading
           <svg class="bi" aria-hidden="true">
             <use xlink:href="#chevron-right"></use>
           </svg>
           </a> </div>
         <div class="col-auto d-none d-lg-block">
-          <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img " height="250" preserveAspectRatio="xMidYMid slice" role="img" width="200" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
+          <img src="..." id="article3Image" class="img-fluid overflow-hidden rounded float-end" onerror="this.style.display='none';" alt="article image">
         </div>
       </div>
     </div>
@@ -131,132 +117,110 @@
 	
   <div class="row mb-2">
     <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
-          <h3 class="mb-0">Featured post</h3>
-          <div class="mb-1 text-body-secondary">Nov 12</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link"> Continue reading
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow p-3 mb-5 bg-body-tertiary rounded h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-primary-emphasis" id="article4Category">World</strong>
+          <h3 class="mb-0" id="article4Title">Featured post</h3>
+          <div class="mb-1 text-body-secondary" id="article4Source">Nov 12</div>
+          <p class="card-text mb-auto" id="article4Text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link" id="article4Link"> Continue reading
           <svg class="bi" aria-hidden="true">
             <use xlink:href="#chevron-right"></use>
           </svg>
           </a> </div>
         <div class="col-auto d-none d-lg-block">
-          <img src="..."  class="img-fluid rounded float-end" alt="article image">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
+         <img src="..." id="article4Image" class="img-fluid overflow-hidden rounded float-end" onerror="this.style.display='none';" alt="article image">
         </div>
       </div>
     </div>
     <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link"> Continue reading
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow p-3 mb-5 bg-body-tertiary rounded h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis" id="article5Category">Design</strong>
+          <h3 class="mb-0" id="article5Title">Post title</h3>
+          <div class="mb-1 text-body-secondary" id="article5Source">Nov 11</div>
+          <p class="mb-auto" id="article5Text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link" id="article5Link"> Continue reading
           <svg class="bi" aria-hidden="true">
             <use xlink:href="#chevron-right"></use>
           </svg>
           </a> </div>
         <div class="col-auto d-none d-lg-block">
-          <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img " height="250" preserveAspectRatio="xMidYMid slice" role="img" width="200" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
+          <img src="..." id="article5Image" class="img-fluid overflow-hidden rounded float-end" onerror="this.style.display='none';" alt="article image">
         </div>
       </div>
     </div>
 	  <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link"> Continue reading
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow p-3 mb-5 bg-body-tertiary rounded h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis" id="article6Category">Design</strong>
+          <h3 class="mb-0" id="article6Title">Post title</h3>
+          <div class="mb-1 text-body-secondary" id="article6Source">Nov 11</div>
+          <p class="mb-auto" id="article6Text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link" id="article6Link"> Continue reading
           <svg class="bi" aria-hidden="true">
             <use xlink:href="#chevron-right"></use>
           </svg>
           </a> </div>
         <div class="col-auto d-none d-lg-block">
-          <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img " height="250" preserveAspectRatio="xMidYMid slice" role="img" width="200" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
+          <img src="..." id="article6Image" class="img-fluid overflow-hidden rounded float-end" onerror="this.style.display='none';" alt="article image">
         </div>
       </div>
     </div>
 	  <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link"> Continue reading
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow p-3 mb-5 bg-body-tertiary rounded h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis" id="article7Category">Design</strong>
+          <h3 class="mb-0" id="article7Title">Post title</h3>
+          <div class="mb-1 text-body-secondary" id="article7Source">Nov 11</div>
+          <p class="mb-auto" id="article7Text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link" id="article7Link"> Continue reading
           <svg class="bi" aria-hidden="true">
             <use xlink:href="#chevron-right"></use>
           </svg>
           </a> </div>
         <div class="col-auto d-none d-lg-block">
-          <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img " height="250" preserveAspectRatio="xMidYMid slice" role="img" width="200" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
+          <img src="..." id="article7Image" class="img-fluid overflow-hidden rounded float-end" onerror="this.style.display='none';" alt="article image">
         </div>
       </div>
     </div>
 	  <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link"> Continue reading
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow p-3 mb-5 bg-body-tertiary rounded h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis" id="article8Category">Design</strong>
+          <h3 class="mb-0" id="article8Title">Post title</h3>
+          <div class="mb-1 text-body-secondary" id="article8Source">Nov 11</div>
+          <p class="mb-auto" id="article8Text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link" id="article8Link"> Continue reading
           <svg class="bi" aria-hidden="true">
             <use xlink:href="#chevron-right"></use>
           </svg>
           </a> </div>
         <div class="col-auto d-none d-lg-block">
-          <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img " height="250" preserveAspectRatio="xMidYMid slice" role="img" width="200" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
+          <img src="..." id="article8Image" class="img-fluid overflow-hidden rounded float-end" onerror="this.style.display='none';" alt="article image">
         </div>
       </div>
     </div>
 	  <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Post title</h3>
-          <div class="mb-1 text-body-secondary">Nov 11</div>
-          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link"> Continue reading
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow p-3 mb-5 bg-body-tertiary rounded h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static"> <strong class="d-inline-block mb-2 text-success-emphasis" id="article9Category">Design</strong>
+          <h3 class="mb-0" id="article9Title">Post title</h3>
+          <div class="mb-1 text-body-secondary" id="article9Source">Nov 11</div>
+          <p class="mb-auto" id="article9Text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="icon-link gap-1 icon-link-hover stretched-link" id="article9Link"> Continue reading
           <svg class="bi" aria-hidden="true">
             <use xlink:href="#chevron-right"></use>
           </svg>
           </a> </div>
         <div class="col-auto d-none d-lg-block">
-          <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img " height="250" preserveAspectRatio="xMidYMid slice" role="img" width="200" xmlns="http://www.w3.org/2000/svg">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect>
-            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
+          <img src="..." id="article9Image" class="img-fluid overflow-hidden rounded float-end" onerror="this.style.display='none';" alt="article image">
         </div>
       </div>
     </div>
 	  
   </div>
 	
-  <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
+  <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top border-primary">
     <div class="col-md-4 d-flex align-items-center"> <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap">
       <svg class="bi" width="30" height="24" aria-hidden="true">
         <use xlink:href="#bootstrap"></use>
       </svg>
-      </a> <span class="mb-3 mb-md-0 text-body-secondary">© 2026 Stardust Flux. All Rights Reserved. </span> </div>
+      </a> <span class="mb-3 mb-md-0 text-body-secondary">©2026 Stardust Flux. All Rights Reserved. </span> </div>
   </footer>
 	
 </main>

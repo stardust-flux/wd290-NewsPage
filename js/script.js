@@ -33,41 +33,57 @@ const article2Source = document.getElementById('article2Source');
 const article2Title = document.getElementById('article2Title');
 const article2Text = document.getElementById('article2Text');
 const article2Link = document.getElementById('article2Link');
+const article2Category = document.getElementById('article2Category');
+const article2Image = document.getElementById('article2Image');
 
 const article3Source = document.getElementById('article3Source');
 const article3Title = document.getElementById('article3Title');
 const article3Text = document.getElementById('article3Text');
 const article3Link = document.getElementById('article3Link');
+const article3Category = document.getElementById('article3Category');
+const article3Image = document.getElementById('article3Image');
 
 const article4Source = document.getElementById('article4Source');
 const article4Title = document.getElementById('article4Title');
 const article4Text = document.getElementById('article4Text');
 const article4Link = document.getElementById('article4Link');
+const article4Category = document.getElementById('article4Category');
+const article4Image = document.getElementById('article4Image');
 
 const article5Source = document.getElementById('article5Source');
 const article5Title = document.getElementById('article5Title');
 const article5Text = document.getElementById('article5Text');
 const article5Link = document.getElementById('article5Link');
+const article5Category = document.getElementById('article5Category');
+const article5Image = document.getElementById('article5Image');
 
 const article6Source = document.getElementById('article6Source');
 const article6Title = document.getElementById('article6Title');
 const article6Text = document.getElementById('article6Text');
 const article6Link = document.getElementById('article6Link');
+const article6Category = document.getElementById('article6Category');
+const article6Image = document.getElementById('article6Image');
 
 const article7Source = document.getElementById('article7Source');
 const article7Title = document.getElementById('article7Title');
 const article7Text = document.getElementById('article7Text');
 const article7Link = document.getElementById('article7Link');
+const article7Category = document.getElementById('article7Category');
+const article7Image = document.getElementById('article7Image');
 
 const article8Source = document.getElementById('article8Source');
 const article8Title = document.getElementById('article8Title');
 const article8Text = document.getElementById('article8Text');
 const article8Link = document.getElementById('article8Link');
+const article8Category = document.getElementById('article8Category');
+const article8Image = document.getElementById('article8Image');
 
 const article9Source = document.getElementById('article9Source');
 const article9Title = document.getElementById('article9Title');
 const article9Text = document.getElementById('article9Text');
 const article9Link = document.getElementById('article9Link');
+const article9Category = document.getElementById('article9Category');
+const article9Image = document.getElementById('article9Image');
 
 // Students should change these values.
 const cityName = 'Nashville, TN';
@@ -135,7 +151,7 @@ async function loadWeather() {
     weatherIcon.textContent = weather.icon;
     weatherTemp.textContent = data.current.temperature_2m + '°C';
     weatherCondition.textContent = weather.text;
-    weatherWind.textContent = data.current.wind_speed_10m + ' km/h';
+    weatherWind.textContent = 'Winds: ' + data.current.wind_speed_10m + ' km/h';
   } catch (error) {
     weatherError.textContent = 'Could not load weather data.';
     weatherError.classList.remove('d-none');
@@ -149,11 +165,11 @@ async function loadCurrency() {
     const response = await fetch(currencyUrl);
     const data = await response.json();
 
-    rateEUR.textContent = data.rates.EUR.toFixed(4);
-    rateGBP.textContent = data.rates.GBP.toFixed(4);
-    rateJPY.textContent = data.rates.JPY.toFixed(4);
-    rateMXN.textContent = data.rates.MXN.toFixed(4);
-    rateUAH.textContent = data.rates.UAH.toFixed(4);
+    rateEUR.textContent = 'EUR: ' + data.rates.EUR.toFixed(4);
+    rateGBP.textContent = 'GBP: ' + data.rates.GBP.toFixed(4);
+    rateJPY.textContent = 'JPY: ' + data.rates.JPY.toFixed(4);
+    rateMXN.textContent = 'MXN: ' + data.rates.MXN.toFixed(4);
+    rateUAH.textContent = 'UAH: ' + data.rates.UAH.toFixed(4);
   } catch (error) {
     currencyError.textContent = 'Could not load exchange rates.';
     currencyError.classList.remove('d-none');
@@ -186,6 +202,7 @@ async function loadNews() {
     featuredTitle.textContent = article0.title;
     featuredText.textContent = article0.description || 'No description available.';
     featuredLink.href = article0.link;
+    featuredLink.target = '_blank';
 
     if (article0.image_url) {
       featuredImage.src = article0.image_url;
@@ -197,8 +214,9 @@ async function loadNews() {
       article1Title.textContent = article1.title;
       article1Text.textContent = article1.description || 'No description available.';
       article1Link.href = article1.link;
-		  article1Category.textContent = article1.category;
-		  article1Image.src = article1.image_url;
+      article1Link.target = '_blank';
+      article1Category.textContent = article1.category;
+      article1Image.src = article1.image_url;
     }
 
     if (article2) {
@@ -206,6 +224,9 @@ async function loadNews() {
       article2Title.textContent = article2.title;
       article2Text.textContent = article2.description || 'No description available.';
       article2Link.href = article2.link;
+      article2Link.target = '_blank';
+      article2Category.textContent = article2.category;
+      article2Image.src = article2.image_url;
     }
 
     if (article3) {
@@ -213,6 +234,9 @@ async function loadNews() {
       article3Title.textContent = article3.title;
       article3Text.textContent = article3.description || 'No description available.';
       article3Link.href = article3.link;
+      article3Link.target = '_blank';
+      article3Category.textContent = article3.category;
+      article3Image.src = article3.image_url;
     }
 
     if (article4) {
@@ -220,6 +244,9 @@ async function loadNews() {
       article4Title.textContent = article4.title;
       article4Text.textContent = article4.description || 'No description available.';
       article4Link.href = article4.link;
+      article4Link.target = '_blank';
+      article4Category.textContent = article4.category;
+      article4Image.src = article4.image_url;
     }
 	  
 	if (article5) {
@@ -227,6 +254,9 @@ async function loadNews() {
       article5Title.textContent = article5.title;
       article5Text.textContent = article5.description || 'No description available.';
       article5Link.href = article5.link;
+      article5Link.target = '_blank';
+      article5Category.textContent = article5.category;
+      article5Image.src = article5.image_url;
     }
 	  
 	if (article6) {
@@ -234,6 +264,9 @@ async function loadNews() {
       article6Title.textContent = article6.title;
       article6Text.textContent = article6.description || 'No description available.';
       article6Link.href = article6.link;
+      article6Link.target = '_blank';
+      article6Category.textContent = article6.category;
+      article6Image.src = article6.image_url;
     }
 	
 	if (article7) {
@@ -241,6 +274,8 @@ async function loadNews() {
       article7Title.textContent = article7.title;
       article7Text.textContent = article7.description || 'No description available.';
       article7Link.href = article7.link;
+      article7Category.textContent = article7.category;
+      article7Image.src = article7.image_url;
     }
 	  
 	if (article8) {
@@ -248,6 +283,9 @@ async function loadNews() {
       article8Title.textContent = article8.title;
       article8Text.textContent = article8.description || 'No description available.';
       article8Link.href = article8.link;
+      article8Link.target = '_blank';
+      article8Category.textContent = article8.category;
+      article8Image.src = article8.image_url;
     }
 	  
 	if (article9) {
@@ -255,6 +293,9 @@ async function loadNews() {
       article9Title.textContent = article9.title;
       article9Text.textContent = article9.description || 'No description available.';
       article9Link.href = article9.link;
+      article9Link.target = '_blank';
+      article9Category.textContent = article9.category;
+      article9Image.src = article9.image_url;
     }
 	  
   } catch (error) {

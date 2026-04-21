@@ -1,6 +1,70 @@
 @charset "UTF-8";
 /* CSS Document */
 
+* {
+	font-family:tahoma, Consolas, "Courier New", monospace;
+	transition: all 0.3s ease;
+}
+
+body {
+	background-color: rgba(93, 137, 186, 0.1);
+}
+
+h1, h3 {
+	text-wrap: balance;
+}
+p {
+	text-wrap: pretty;
+}
+
+.banner {
+	background-image: linear-gradient(#a9a9a9, rgb(239, 239, 239), #5D89BA);
+}
+
 #div1 {
 	font-size: 36px;
+}
+
+.fakeimg {
+	font-size: 60px;
+}
+ .weather { 
+	text-decoration: underline;
+	text-decoration-color: skyblue;
+ }
+.currency {
+	text-decoration: underline;
+	text-decoration-color: green;
+}
+
+.img-fluid {
+	width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.bannerHeadline {
+	font-size: 75px;
+	font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.bannerTagline {
+	font-size: 36px;
+	font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+.container {
+  display: -webkit-box;
+  -webkit-line-clamp: 8; /* Number of lines to show */
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+
+.mb-auto {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }
