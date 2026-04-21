@@ -197,8 +197,8 @@ async function loadNews() {
       article1Title.textContent = article1.title;
       article1Text.textContent = article1.description || 'No description available.';
       article1Link.href = article1.link;
-		article1Category.textContent = article1.category;
-		article1Image.src = article1.image_url;
+		  article1Category.textContent = article1.category;
+		  article1Image.src = article1.image_url;
     }
 
     if (article2) {
